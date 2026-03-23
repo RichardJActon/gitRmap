@@ -67,7 +67,7 @@ write.csv(to_plot, file="data/locations.csv", row.names = FALSE)
 
 # How many columns in locations.csv? If 5, then no popup data
 
-if (dim(all_data)[2] == 5) { # then no popup data
+if (dim(all_data)[2] == 5) { # then no popup data, so we can write version of html without popup
   text = "no popup"
 } else {
   text = "popup"
