@@ -4,7 +4,7 @@
 <head>
 
 <meta charset="UTF-8">
-  <title>Global Open Science Advocates Support Network</title>
+  <title>gitRmap</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
@@ -53,41 +53,12 @@
 
 <div class="rounded_box">
 
- <h1>🔓 Welcome to the Global Open Science Advocates Support Network</h1>
+ <h1>gitRmap / "Guitar Map"</h1></h1>
 
-  <p>What you see here is more than just a map – it’s a living network of Open Science advocates from around the world.<br>
-  Some of us work officially in Open Science. Others are grassroots activists.<br>
-  All of us believe in the power of open, collaborative, and inclusive science.</p>
-
-  <h2>🤝 What is this network about?</h2>
-  <p>This is a mutual support network for people in Open Science / Open Research roles:</p>
-  <ul>
-    <li>🌱 Empower each other in eScience roles</li>
-    <li>🧠 Exchange knowledge & ideas</li>
-    <li>✈️ Support each other on-site during conferences or visits</li>
-  </ul>
-
-  <h2>🚀 How to join</h2>
-  <p>It's super easy!</p>
-  <ol>
-    <li>Join our Discord server – just click here 👉 <a href="https://discord.gg/fjPFyPxCkE">Join Discord</a></li>
-    <li>Add your pin to the map – if you’re okay with publishing your contact data, fill in your details in this 👉 <a href="#">Google Sheet</a></li>
-  </ol>
-
-  <h2>🌈 Who can join?</h2>
-  <p>Whether you’re working in an institution or volunteering (or thinking about volunteering) in your free time –  
-  no matter your age, career stage, domain, academic or non-academic background – you’re welcome here. This is a space for you.</p>
-
-  <p>We are a diverse and inclusive community and we’re excited to meet you!</p>
-
-  <p>🤝 We follow the <a href="https://digital-research.academy/code-of-conduct/">Code of Conduct</a> of the Digital Research Academy (DRA) – your safety, dignity, and voice matter here.</p>
-
-  <h2>🗺️ Discover the network</h2>
-  <p>Take a look at the map and discover others near you – or far away.<br>
-  We’re building this network together. One pin, one connection at a time.</p>
-
-  <p>See you! 👋</p>
-
+  <p>gitRmap is a semi-automated map of locations, which you can add your own points to. 
+  Designed for those who are new to GIS, but know a little bit of Git.</p>
+  
+  <p>Create a map like the one below, with your own pins on it, by following the quick start below.</p>
 
 </div>
 
@@ -97,7 +68,65 @@
 
 <div id="mapid" style="width: 600px; height: 400px; margin-left: 20px; margin-top: 20px"></div>
 
-<p class="fine_print">Want to improve this web page or the map? <a href="https://github.com/nickbearman/open-science-activism-map">Contribute to this community project on GitHub</a>.</p>
+</div>
+
+<br>
+
+<div class="rounded_box">
+
+<h2>Quick Start:</h2>
+
+<ul>
+  <li>Go to <a href="https://github.com/nickbearman/gitRmap/" target="_blank">https://github.com/nickbearman/gitRmap/</a></li>
+  <li>Fork: Click Fork, Give your map a name, Click Create fork</li>
+  <li>Setup GitHub Pages - Deploy from branch - main - docs/, Go to Actions. I understand my workflows, enable them.</li>
+  <li>Edit the file data/locations.csv, Make your changes, Click Commit Changes, A Brown dot - means it is running.</li>
+  <li>Wait ~1min for GitHub Actions to run</li>
+  <ul>
+    <li>Click Actions - see 2 entries - update locations and pages build and deployment</li>
+    <li>Wait for them to complete.</li>
+    <li>Update locations should take ~1min.</li>
+    <li>Build pages and depolyment should take <1 min</li>
+    <li>Click build pages and depolyment</li>
+  </ul>
+  <li>When complete, go to https://(username).github.io/gitRmap/ to see your map</li>
+</ul>
+
+</div>
+
+<br>
+
+<div class="rounded_box">
+
+<h2>FAQ</h2>
+
+<p><i>Frequently Asked Questions will go here</i></p>
+
+</div>
+
+<br>
+
+<div class="rounded_box">
+
+<h2>History</h2>
+
+<p>This was inspired by Michele Tobias's Travelling GIS Chat Book map setup in 2023
+<a href="https://github.com/MicheleTobias/traveling-gis-chat-book">https://github.com/MicheleTobias/traveling-gis-chat-book</a> 
+which is a automated Leaflet webmap, where users can provide locations (city, state, 
+country) in a CSV file, and GitHub actions will create the Leaflet map using an R script.</p>
+
+<p>In April 2025, I was at the <a href="https://open.science-retreat.org/">Open 
+Science Retreat</a> where I was asked to create a 
+web map showing a series of points with some pop-up text. This is a simple map for 
+a GIS user to create, but the people who were asking were not GIS users, but they 
+did know Git. Instead of just creating the map for them, I wanted to give them the 
+tools to create the map themselves. I tweaked the Travelling GIS Chat Book map for 
+them to create the <a href="https://nickbearman.com/open-science-activism-map/">
+  Open Science Activism Map</a>.</p>
+
+<p>This worked, but wasn't really complete and wasn't something people could pick up 
+and use. In Dec 2025, I applied for £500 from OSGeo:UK's GoFundGeo to make this happen, 
+and this was funded. Thanks to OSGeo:UK!</p>
 
 </div>
 
