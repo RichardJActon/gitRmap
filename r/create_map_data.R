@@ -63,26 +63,6 @@ if (dim(all_data)[2] == 5) { # then no popup data, so no need to join
 # write the data back to the csv so don't need to geocode every line every time it updates
 write.csv(to_plot, file="data/locations.csv", row.names = FALSE)
 
-# Create HTML file
-
-# How many columns in locations.csv? If 5, then no popup data
-
-if (dim(all_data)[2] == 5) { # then no popup data, so we can write version of html without popup
-  text = "no popup"
-} else {
-  text = "popup"
-}
-
-
-
-# if no columns
-
-
-
-# if columns
-
-# set text
-
 # write the text to the HTML file
 file_connection<-file("docs/new.html")
 writeLines(text=text, con=file_connection)
