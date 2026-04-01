@@ -54,7 +54,8 @@ if (dim(to_geocode)[1]>0){ #if there is more than 0 rows to geocode
 if (dim(all_data)[2] == 5) { # then no popup data, so no need to join
   
 } else { # then join columns for popup
-  to_plot <- cbind(to_plot,all_data[,6:dim(all_data)[2]])
+  extra_cols <- all_data[, 6:dim(all_data)[2], drop = FALSE]
+  to_plot <- cbind(to_plot, extra_cols)
 }
 
 
