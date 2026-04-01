@@ -230,21 +230,31 @@ for (let coord in locationMap) {
       return val !== undefined && val !== null && val !== "" && val !== "undefined" && val !== "null";
     }
 
-  let popupContent = featuresAtLocation.map(feature => { //if field is missing, don't show
-      let props = feature.properties;
-      let parts = [];
-  
-      if (hasValue(props.name))    parts.push("<b>Name: </b>" + props.name);
-      if (hasValue(props.job))     parts.push("<b>Job Title: </b>" + props.job);
-      if (hasValue(props.contact) && hasValue(props.contactlink)) {
-          parts.push("<b>Contact: </b> <a href=" + props.contactlink + " target=\"blank\">" + props.contact + "</a>");
-      } else if (hasValue(props.contact)) {
-          parts.push("<b>Contact: </b>" + props.contact);
-      }
-      if (hasValue(props.open))    parts.push("<b>Open to: </b>" + props.open);
-  
-      return parts.join("<br>");
-  }).join("<hr>");
+    let popupContent = featuresAtLocation.map(feature => { //add content dynamically based on column names
+        let props = feature.properties;
+        let parts = [];
+    
+        const skipKeys = ['contactlink', 'city', 'state', 'country']; //columns to skip
+        
+        Object.keys(props).forEach(key => {
+            if (skipKeys.includes(key)) return; // skip, ignore these columns
+            let val = props[key];
+            if (hasValue(val)) {
+                // Format the key as a readable label (e.g. "jobTitle" -> "Job Title")
+                let label = key
+                    .replace(/([A-Z])/g, ' $1')   // camelCase to words
+                    .replace(/_/g, ' ')             // snake_case to words
+                    .replace(/\b\w/g, c => c.toUpperCase()); // capitalise each word
+              if (key === 'contact' && hasValue(props.contactlink)) { //special case to include link for contact link
+                parts.push("<b>" + label + ": </b><a href=" + props.contactlink + " target=\"blank\">" + val + "</a>");
+              } else {
+                parts.push("<b>" + label + ": </b>" + val);
+              }
+            }
+        });
+    
+        return parts.join("<br>");
+    }).join("<hr>");
 
     // Determine radius
     let count = featuresAtLocation.length;
