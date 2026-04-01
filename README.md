@@ -12,15 +12,19 @@ A semi-automated map of locations, which you can add your own points to. Designe
   - Click Actions - see 2 entries - update locations and pages build and deployment
   - Wait for them to complete. 
   - Update locations should take ~1min.  
-  - Build pages and depolyment should take <1 min
-  - Click build pages and depolyment
+  - Build pages and deployment should take <1 min
+  - Click build pages and deployment
 - When complete, **go to https://(username).github.io/gitRmap/ to see your map**
 
 More detailed tutorial to follow. 
 
 ## FAQ:
 
-*Frequently Asked Questions will go here*
+How do I setup gitRmap?
+ - Fork the repo at [https://github.com/nickbearman/gitRmap](https://github.com/nickbearman/gitRmap). Follow the instructions in the README.md file, or check out this [YouTube video](https://youtu.be/-N1I1okulN4).
+
+How do I update to the latest version of gitRmap?
+ - Updates will be made to the gitRmap repo at [https://github.com/nickbearman/gitRmap](https://github.com/nickbearman/gitRmap). Use **Sync Fork** in GitHub to get the updates to your repo. See this [YouTube video](https://www.youtube.com/watch?v=4L0VEnqRvwQ) for details. 
 
 ## History:
 
