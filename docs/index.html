@@ -53,19 +53,17 @@
 
 <div class="rounded_box">
 
- <h1>gitRmap / "Guitar Map"</h1></h1>
+<h1>Open Science Retreat 2026 Locations</h1>
 
-  <p>gitRmap is a semi-automated map of locations, which you can add your own points to. 
-  Designed for those who are new to GIS, but know a little bit of Git.</p>
-  
-  <p>Create a map like the one below, with your own pins on it, by following the quick start below.</p>
-    
-  <p>For more details, see:
-  <ul>
-    <li>the <a href="https://nickbearman.com/gitRmap-docs/" target="_blank">tutorial</a>,</li>
-    <li>the <a href="https://youtu.be/4L0VEnqRvwQ" target="_blank">setup video on YouTube</a>,</li>
-    <li>or the <a href="https://github.com/nickbearman/gitRmap" target="_blank">GitHub repo</a>.</li>
-  </ul>.</p>
+<p>
+	
+</p>
+
+<p>
+I noticed that a number of the book shops I found in Machynlleth were not in <a href="https://www.openstreetmap.org" target="_blank">Open Street Map</a> data!
+You might want to help rectify this by downloading <a href="https://streetcomplete.app/" target="_blank">StreetComplete</a> to improve the current state of the OSM data in Machynlleth.
+For more information on contributing to OSM see the <a href="https://wiki.openstreetmap.org/wiki/How_to_contribute" target="_blank">how to contribute page</a>
+</p>
 
 </div>
 
@@ -83,83 +81,20 @@
 
 <h2>Quick Start:</h2>
 
+<p>To add additional locations to the map:</p>
+
 <ul>
-  <li>Go to <a href="https://github.com/nickbearman/gitRmap/" target="_blank">https://github.com/nickbearman/gitRmap/</a></li>
-  <li><b>Fork</b>: Click Fork, Give your map a name, Click Create fork</li>
-  <li>Setup <b>GitHub Pages</b>
-    <ul>
-      <li>Deploy from branch - main - set folder to docs/</li>
-      <li>- Go to Actions, click I understand my workflows, enable them. </li>
-    </ul>
+  <li>Go to <a href="https://github.com/RichardJActon/gitRmap/" target="_blank">https://github.com/nickbearman/gitRmap/</a></li>
+  <li><b>Fork</b>: Click Fork, to create a fork</li>
   <li><b>Edit</b> the file <b>data/locations.csv</b></li>
   <ul>
-    <li>Make your changes, Click Commit Changes, a brown dot - means it is running, a green tick means it is complete.</li>
+    <li>Make your changes, Click Commit Changes</li>
   </ul>
-  <li><b>Wait ~1min</b> for GitHub Actions to run</li>
-  <ul>
-    <li>Click Actions - see 2 entries - update locations and pages build and deployment</li>
-    <li>Wait for them to complete.</li>
-    <li>Update locations should take ~1min.</li>
-    <li>Build pages and depolyment should take <1 min</li>
-  </ul>
-  <li>When complete, <b>go to https://(username).github.io/gitRmap/</b> to see your map</li>
+  <li>Open a pull request</li>
 </ul>
 
 </div>
 
-<br>
-
-<div class="rounded_box">
-
-<h2>FAQ</h2>
-
-<p><b>How do I setup gitRmap?</b></p>
-
-<p><b>Fork</b> the repo at <a href="https://github.com/nickbearman/gitRmap" target="_blank">https://github.com/nickbearman/gitRmap</a>. Follow the instructions in the README.md file, or check out this <a href="https://youtu.be/-N1I1okulN4" target="_blank">YouTube video</a>.</p>
-
-<p><b>How do I add a point?</b></p>
-
-<p>Add a row to `locations.csv`. Add your City, State and Country in the relevant columns (State is not always required). You do <b>not</b> need to add the coordinates in `lat` and `long` - these will be added automatically. </p>
-
-<p><b>How do I edit the attribute data shown?</b></p>
-
-<p>The attribute data shown in the popup (Name, Job, Contact etc.) is dynamically created based on the columns in `locations.csv`. The standard column are `city`, `state`, `country`, `lat` and `long`. If you have no other columns, there will be no popup. (Rename `locations-no-popup.csv` to `locations.csv` and see what happens). If you have extra columns, they will appear in the popup. The column named `contactlink` will be rendered as a HTML link. </p>
-
-<p><b>What if I don't want any popups?</b></p>
-
-<p>Remove all the extra columns, so you only have `city`, `state`, `country`, `lat` and `long`. Then no popup will be created.</p>
-
-<p><b>How do I update to the latest version of gitRmap?</b></p>
-
-<p>Updates will be made to the gitRmap repo at <a href="https://github.com/nickbearman/gitRmap" target="_blank">https://github.com/nickbearman/gitRmap</a>. Use <b>Sync Fork</b> in GitHub to get the updates to your repo. See this <a href="https://www.youtube.com/watch?v=4L0VEnqRvwQ" target="_blank">YouTube video</a> for details. </p>
-
-</div>
-
-<br>
-
-<div class="rounded_box">
-
-<h2>History</h2>
-
-<p>This was inspired by Michele Tobias's Travelling GIS Chat Book map setup in 2023
-<a href="https://github.com/MicheleTobias/traveling-gis-chat-book">https://github.com/MicheleTobias/traveling-gis-chat-book</a> 
-which is a automated Leaflet webmap, where users can provide locations (city, state, 
-country) in a CSV file, and GitHub actions will create the Leaflet map using an R script.</p>
-
-<p>In April 2025, I was at the <a href="https://open.science-retreat.org/">Open 
-Science Retreat</a> where I was asked to create a 
-web map showing a series of points with some pop-up text. This is a simple map for 
-a GIS user to create, but the people who were asking were not GIS users, but they 
-did know Git. Instead of just creating the map for them, I wanted to give them the 
-tools to create the map themselves. I tweaked the Travelling GIS Chat Book map for 
-them to create the <a href="https://nickbearman.com/open-science-activism-map/">
-  Open Science Activism Map</a>.</p>
-
-<p>This worked, but wasn't really complete and wasn't something people could pick up 
-and use. In Dec 2025, I applied for £500 from OSGeo:UK's GoFundGeo to make this happen, 
-and this was funded. Thanks to OSGeo:UK!</p>
-
-</div>
 
 <script src="locations.js" type="text/javascript"></script>
 
@@ -171,8 +106,8 @@ and this was funded. Thanks to OSGeo:UK!</p>
 
     //add an empty map called "bookmap" to the page in the mapid div
     var bookmap = L.map('mapid', {
-        center: [45, 1],
-        zoom: 2
+        center: [52.59, -3.854],
+        zoom: 4
         });
 
     //add the base map = Stamen Toner tile layer
@@ -321,6 +256,27 @@ for (let coord in locationMap) {
 
 </script>
 
+<br>
+
+<div class="rounded_box">
+
+</h2> Made with: gitRmap / "Guitar Map"</h2>
+<p>
+	gitRmap is a semi-automated map of locations, which you can add your own points to. 
+	Designed for those who are new to GIS, but know a little bit of Git.
+</p>
+ 
+<p>Create a map like this, with your own pins on it, by following the quick start below.</p>
+  
+<p>For more details, see:
+<ul>
+  <li>the <a href="https://nickbearman.com/gitRmap-docs/" target="_blank">tutorial</a>,</li>
+  <li>the <a href="https://youtu.be/4L0VEnqRvwQ" target="_blank">setup video on YouTube</a>,</li>
+  <li>or the <a href="https://github.com/nickbearman/gitRmap" target="_blank">GitHub repo</a>.</li>
+</ul>.
+</p>
+
+</div>
 </body>
 
 </html>
