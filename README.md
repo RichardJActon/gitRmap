@@ -6,22 +6,33 @@ A semi-automated map of locations, which you can add your own points to. Designe
 
 - Go to https://github.com/nickbearman/gitRmap/
 - **Fork**: Click Fork, Give your map a name, Click Create fork
-- Setup **GitHub Pages** - Deploy from branch - main - docs/, Go to Actions. I understand my workflows, enable them. 
-- **Edit** the file **data/locations.csv**, Make your changes, Click Commit Changes, A Brown dot - means it is running. 
+- Setup **GitHub Pages** 
+  - Deploy from branch - main - set folder to docs/, 
+  - Go to Actions, click I understand my workflows, enable them. 
+- **Edit** the file **data/locations.csv** 
+  - Make your changes, Click Commit Changes, a brown dot - means it is running, a green tick means it is complete.
 - **Wait ~1min** for GitHub Actions to run
   - Click Actions - see 2 entries - update locations and pages build and deployment
   - Wait for them to complete. 
   - Update locations should take ~1min.  
   - Build pages and deployment should take <1 min
-  - Click build pages and deployment
-- When complete, **go to https://(username).github.io/gitRmap/ to see your map**
+- When complete, **go to https://(username).github.io/gitRmap/** to see your map
 
-More detailed tutorial to follow. 
+More detailed [tutorial](https://nickbearman.com/gitRmap-docs/) and [YouTube video](https://youtu.be/-N1I1okulN4) available. 
 
 ## FAQ:
 
 How do I setup gitRmap?
  - Fork the repo at [https://github.com/nickbearman/gitRmap](https://github.com/nickbearman/gitRmap). Follow the instructions in the README.md file, or check out this [YouTube video](https://youtu.be/-N1I1okulN4).
+
+How do I add a point?
+  - Add a row to `locations.csv`. Add your City, State and Country in the relevant columns (State is not always required). You do **not** need to add the coordinates in `lat` and `long` - these will be added automatically. 
+
+How do I edit the attribute data shown?
+  - The attribute data shown in the popup (Name, Job, Contact etc.) is dynamically created based on the columns in `locations.csv`. The standard column are `city`, `state`, `country`, `lat` and `long`. If you have no other columns, there will be no popup. (Rename `locations-no-popup.csv` to `locations.csv` and see what happens). If you have extra columns, they will appear in the popup. The column named `contactlink` will be rendered as a HTML link. 
+
+What if I don't want any popups?
+  - Remove all the extra columns, so you only have `city`, `state`, `country`, `lat` and `long`. Then no popup will be created. 
 
 How do I update to the latest version of gitRmap?
  - Updates will be made to the gitRmap repo at [https://github.com/nickbearman/gitRmap](https://github.com/nickbearman/gitRmap). Use **Sync Fork** in GitHub to get the updates to your repo. See this [YouTube video](https://www.youtube.com/watch?v=4L0VEnqRvwQ) for details. 
