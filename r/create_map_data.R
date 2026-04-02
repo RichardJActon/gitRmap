@@ -1,4 +1,4 @@
-#GOAL: process the list of cities for the Traveling GIS Chat Book to 
+#GOAL: process the list of cities for the gitRmap to 
 #   1. get lat/long coords
 #   2. make a geojson file
 #   3. make the javascript file the webmap needs.
@@ -30,11 +30,14 @@ locations <- locations[,1:5]
 
 #  Geocode ---------------------------------------------------------------
 
+# add row index before splitting
+locations$row_id <- seq_len(nrow(locations))
+
 # a table of rows that already have been geocoded
 has_latlong<-locations[which(!is.na(locations$lat)),]
 
 # a table of rows that need to be geocoded
-to_geocode<-locations[which(is.na(locations$lat)), 1:3]
+to_geocode<-locations[which(is.na(locations$lat)), c("city", "state", "country", "row_id")] # include row_id
 
 if (dim(to_geocode)[1]>0){ #if there is more than 0 rows to geocode
   # geocode the new rows
@@ -47,7 +50,13 @@ if (dim(to_geocode)[1]>0){ #if there is more than 0 rows to geocode
   # combine the two tables to make one list of all the cities with their lat/longs
   to_plot<-rbind(has_latlong, new_latlong)
   
+  # restore original order
+  to_plot <- to_plot[order(to_plot$row_id), ]
+  
 }else{to_plot<-has_latlong}
+
+# remove the row_id column before continuing
+to_plot$row_id <- NULL
 
 #join extra columns back on if they exist
 
