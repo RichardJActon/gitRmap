@@ -107,7 +107,7 @@ For more information on contributing to OSM see the <a href="https://wiki.openst
     //add an empty map called "bookmap" to the page in the mapid div
     var bookmap = L.map('mapid', {
         center: [52.59, -3.854],
-        zoom: 10
+        zoom: 12
         });
 
     //add the base map = Stamen Toner tile layer
@@ -200,7 +200,7 @@ for (let coord in locationMap) {
         let props = feature.properties;
         let parts = [];
     
-        const skipKeys = ['contactlink', 'city', 'state', 'country']; //columns to skip
+        const skipKeys = ['link', 'city', 'state', 'country']; //columns to skip
         
         Object.keys(props).forEach(key => {
             if (skipKeys.includes(key)) return; // skip, ignore these columns
@@ -211,8 +211,11 @@ for (let coord in locationMap) {
                     .replace(/([A-Z])/g, ' $1')   // camelCase to words
                     .replace(/_/g, ' ')             // snake_case to words
                     .replace(/\b\w/g, c => c.toUpperCase()); // capitalise each word
-              if (key === 'contact' && hasValue(props.contactlink)) { //special case to include link for contact link
-                parts.push("<b>" + label + ": </b><a href=" + props.contactlink + " target=\"blank\">" + val + "</a>");
+              // if (key === 'contact' && hasValue(props.contactlink)) { //special case to include link for contact link
+              //  parts.push("<b>" + label + ": </b><a href=" + props.contactlink + " target=\"blank\">" + val + "</a>");
+              // } else {
+              if (key === 'name' && hasValue(props.link)) {
+                parts.push("<b>" + label + ": </b><a href=" + props.link + " target=\"blank\">" + val + "</a>");
               } else {
                 parts.push("<b>" + label + ": </b>" + val);
               }
