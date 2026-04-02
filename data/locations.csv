@@ -1,11 +1,11 @@
-"city","state","country","lat","long","name","job","contact","contactlink"
-"Marburg","Hesse","Germany",50.8138054249334,8.77126858185194,"Lydia Riedl","eScience Manager with focus on Open Science","lydia.riedl@uni-marburg.de","mailto:lydia.riedl@uni-marburg.de"
-"Zurich","Zurich","Switzerland",47.3767670601068,8.54334271074418,"Ryssa","Postdoc Researcher","ryssa.moffat@gess.ethz.ch","mailto:ryssa.moffat@gess.ethz.ch"
-"Bristol","","UK",51.454514,-2.58791,"Ruth Davies","UKRN Open Research Programme Project Coordinator","Ruth.1.davies@kcl.ac.uk","mailto:Ruth.1.davies@kcl.ac.uk"
-"London","London","UK",51.5836904308479,-0.104558860944694,"Ruby Sleigh","Architect, Tutor","rubysleigh@gmail.com","mailto:rubysleigh@gmail.com"
-"Aachen","NRW","Germany",50.7753,6.0839,"Julia Pauquet","Scientific Coordinator, DRA Person","juliapauquet@gmail.com","mailto:juliapauquet@gmail.com"
-"Norwich","Norfolk","UK",50.5530124279425,-2.4294969829782,"Test","Test Job","nick@nickbearman.com","mailto:nick@nickbearman.com"
-"Zürich","ZH","Switzerland",47.3767670601068,8.54334271074418,"Peter Degen","Postdoc Center for Reproducible Science","peter.methys@proton.me","mailto:peter.methys@proton.me"
-"Zürich","ZH","Switzerland",47.3744489,8.5410422,"Peter Degen","Postdoc Center for Reproducible Science","peter.methys@proton.me","mailto:peter.methys@proton.me"
-"Redruth","Cornwall","UK",50.233989,-5.2276468,"Nick Bearman","Postdoc Center for Reproducible Science","peter.methys@proton.me","mailto:peter.methys@proton.me"
-"Norwich","","UK",52.6285576,1.2923954,"Nick Bearman","Some job","nick@nickbearman.com","mailto:nick@nickbearman.com"
+city,state,country,lat,long,name,job,contact,contactlink
+London,,UK,,,Sherlock Holmes,Consulting Detective,"221B Baker Street, London",https://en.wikipedia.org/wiki/Sherlock_Holmes
+Princeton,NJ,USA,,,Indiana Jones,Field Archaeologist & Map Enthusiast,i.jones@marshallcollege.edu,mailto:i.jones@marshallcollege.edu
+Amsterdam,,Netherlands,,,Captain Nemo,Ocean Floor Mapping Director,nautilusresearch.nl,https://nautilusresearch.nl
+London,,UK,,,Phileas Fogg,Global Route Planner,reformclub.co.uk,https://reformclub.co.uk
+Portland,Oregon,USA,,,Linus Torvalds,Git Creator & Open Source Lead,https://en.wikipedia.org/wiki/Linus_Torvalds#,https://en.wikipedia.org/wiki/Linus_Torvalds#
+Davis,California,USA,,,Michele Tobias,Geospatial Data Specialist,https://www.linkedin.com/in/michele-tobias-21070523/,https://www.linkedin.com/in/michele-tobias-21070523/
+Marburg,Hesse,Germany,,,Lydia Riedl,eScience Manager with focus on Open Science,lydia.riedl@uni-marburg.de,mailto:lydia.riedl@uni-marburg.de
+Munich,Bavaria,Germany,,,Dr. Heidi Seibold,Co-Executive Director Digital Research Academy,https://www.linkedin.com/in/dr-heidi-seibold/,https://www.linkedin.com/in/dr-heidi-seibold/
+Aachen ,North Rhine-Westphalia,Germany,,,"Dr. Joyce Kao, EMBA",Co Executive Director @ Digital Research Academy,https://www.linkedin.com/in/joyceykao/,https://www.linkedin.com/in/joyceykao/
+Redruth,Cornwall,UK,50.233989,-5.2276468,Nick Bearman,"GIS Trainer and Consultant, creator of gitRmap",https://nickbearman.com/gitRmap/,https://nickbearman.com/gitRmap/
